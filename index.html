@@ -8,15 +8,43 @@
   <script src="index.js"></script>
   <script src='jquery.min.js'></script>
   <script src='query.js'></script>
+  <link rel="shortcut icon" href="logo.png" />
+  <!--
   <meta http-equiv="refresh" content="0.5;url=/readme.htm?src=https://namesys-eth.github.io/ipfs2-eth-resources/README.md">
-  <title>🌐 IPFS2</title>
+  -->
+  <title>IPFS2 | Web3 IPFS Gateway</title>
 </head>
 
 <body>
-  <div class="header">
-    <h1 style="text-align: center;">IPFS2.eth</h1>
-    <h4 style="text-align: center;">Web3 IPFS Gateway</h4>
-    <h5 style="text-align: center;">Made with <span style="color: red;">Love</span>, <span style="color: rgb(0, 119, 255);">ENS</span> and <span style="color: rgb(40, 184, 0);">CCIP</span></h5>
+  <div class="header" style="display: flex; flex-direction: column; align-items: center;">
+    <img src="logo.png" height="100px" width="100px"/>
+    <div>
+      <h1 style="text-align: center; color: orangered;">IPFS2.eth</h1>
+      <h4 style="text-align: center; color: orangered;">Web3 IPFS Gateway</h4>
+    </div>
+  </div>
+  <div class="container">
+    <div
+      style="display: flex; flex-direction: column; align-items: center;"
+    >
+    <h2 style="text-align: center; color: orangered;">Search</h2>
+      <input 
+        type="text"
+        placeholder="Enter IPFS hash, IPNS key or ENS Subdomain" 
+        id="myInput" 
+        onchange="handleInputChange()"
+      />
+      <button class="button-search" id="pingGateway" onclick="redirect()">
+        <span 
+          class="material-icons"
+        >
+          search
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="container-2 bottom" style="margin-top: 30px;">
+    <a href="readme.htm?src=https://namesys-eth.github.io/ipfs2-eth-resources/README.md" target="_blank" class="button" id="showFaq">📚 README</a>
   </div>
   <div class="readme" id="mdcontainer">
   </div>

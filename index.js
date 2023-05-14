@@ -29,6 +29,17 @@ function showFaq() {
   console.log('Redirecting to README');
 }
 
+function redirect() {
+  const inputElement = document.getElementById("myInput");
+  const inputValue = inputElement.value;
+  window.open("https://" + inputValue + ".ipfs2.eth.limo", '_blank');
+}
+
+function handleInputChange() {
+  const inputElement = document.getElementById("myInput");
+  const inputValue = inputElement.value;
+}
+
 function showModal(title, message, type) {
   const modalWrapper = document.createElement('div');
   modalWrapper.classList.add('modal-wrapper', type);
